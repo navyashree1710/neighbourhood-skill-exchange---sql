@@ -1,21 +1,21 @@
-# 🔄 Neighborhood Skill Exchange — SQL Project
+#  Neighborhood Skill Exchange — SQL Project
 
 A relational database project that models a hyperlocal skill-swapping platform where people exchange skills instead of money. Built entirely in SQLite using DB Browser.
 
 ---
 
-## 💡 Project Idea
-
+##  Project Idea
+I was alone at home the other day, cleaning as the new month was approaching, and I needed some help with moving stuff around. I had no one to call, that's when this idea came to me, why not exchange skills with my neighbours? 
 Instead of paying for services, people in a neighborhood offer what they know and request what they need. For example:
+- Sam helps parallel park → gets a professional photo taken from Neha
 - Priya teaches Python → gets Yoga lessons from Karan
 - Rahul teaches Guitar → gets South Indian cooking from Sneha
 - Rohan shares his scooty for an hour → gets woodworking help from Nikhil
 
-No money changes hands — just skills.
+No money needed — just skills.
 
----
 
-## 🗄️ Database Structure
+##  Database Structure
 
 The project has 5 tables:
 
@@ -85,7 +85,7 @@ Skills span 9 categories: Tech, Music, Design, Fitness, Cooking, Photography, La
 
 ---
 
-## 🔍 Key Queries
+##  Key Queries
 
 ### Find perfect swap matches
 ```sql
@@ -145,7 +145,7 @@ WHERE swap_requests.status = 'pending';
 
 ---
 
-## ⚙️ SQL Concepts Used
+##  SQL Concepts Used
 
 - `CREATE TABLE` with primary and foreign keys
 - `INSERT` and CSV bulk import
@@ -159,7 +159,7 @@ WHERE swap_requests.status = 'pending';
 
 ---
 
-## 🗂️ Files in this Repository
+##  Files in this Repository
 
 | File | Description |
 |---|---|
@@ -173,7 +173,7 @@ WHERE swap_requests.status = 'pending';
 
 ---
 
-## 🛠️ How to Run
+##  How to Run
 
 1. Download and install [DB Browser for SQLite](https://sqlitebrowser.org/dl/) (free, 17MB)
 2. Open DB Browser → File → Import → Database from SQL file → select `skill_exchange.sql`
