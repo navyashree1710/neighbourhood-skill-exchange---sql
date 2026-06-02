@@ -1,0 +1,9 @@
+id,swap_id,reviewer_id,reviewee_id,rating,comment,review_date
+1,1,1,4,5,Karan was an amazing yoga teacher very patient,2024-01-07
+2,2,4,1,5,Priya explained Python so clearly highly recommend,2024-01-07
+3,3,2,5,4,Sneha taught me great recipes will swap again,2024-01-12
+4,4,5,2,5,Rahul is a fantastic guitar teacher,2024-01-12
+5,5,3,7,4,Divya made French feel easy and fun,2024-01-17
+6,6,7,3,5,Ananya designed something beautiful for me,2024-01-17
+7,7,9,2,3,Good lessons but timing was a bit off,2024-01-22
+8,8,6,7,4,Divya was helpful and very thorough,2024-01-24

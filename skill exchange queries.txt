@@ -1,0 +1,72 @@
+
+-- BASIC QUERIES
+
+SELECT * FROM users;
+SELECT * FROM skills;
+
+
+-- JOIN QUERIES
+
+-- Who offers what
+SELECT users.name, skills.name AS skill, user_skills.type
+FROM user_skills
+JOIN users ON user_skills.user_id = users.id
+JOIN skills ON user_skills.skill_id = skills.id;
+
+-- Perfect swap matches
+SELECT 
+  u1.name AS person_1,
+  s.name AS skill,
+  u2.name AS person_2_wants
+FROM user_skills us1
+JOIN user_skills us2 ON us1.skill_id = us2.skill_id
+JOIN users u1 ON us1.user_id = u1.id
+JOIN users u2 ON us2.user_id = u2.id
+JOIN skills s ON us1.skill_id = s.id
+WHERE us1.type = 'offer' AND us2.type = 'want'
+AND us1.user_id != us2.user_id;
+
+-- GROUP BY QUERIES
+-- Most offered skills
+SELECT skills.name, COUNT(*) AS total_offers
+FROM user_skills
+JOIN skills ON user_skills.skill_id = skills.id
+WHERE user_skills.type = 'offer'
+GROUP BY skills.name
+ORDER BY total_offers DESC;
+
+-- Skills wanted by more than 1 person
+SELECT users.name, COUNT(*) AS skills_wanted
+FROM user_skills
+JOIN users ON user_skills.user_id = users.id
+WHERE user_skills.type = 'want'
+GROUP BY users.name
+HAVING COUNT(*) > 1;
+
+
+-- VIEWS & TRIGGERS
+-- View: swap matches
+CREATE VIEW swap_matches AS
+SELECT 
+  u1.name AS offers,
+  s.name AS skill,
+  u2.name AS wants
+FROM user_skills us1
+JOIN user_skills us2 ON us1.skill_id = us2.skill_id
+JOIN users u1 ON us1.user_id = u1.id
+JOIN users u2 ON us2.user_id = u2.id
+JOIN skills s ON us1.skill_id = s.id
+WHERE us1.type = 'offer' 
+AND us2.type = 'want'
+AND us1.user_id != us2.user_id;
+
+-- Trigger: auto set request date
+CREATE TRIGGER set_request_date
+AFTER INSERT ON swap_requests
+FOR EACH ROW
+WHEN NEW.requested_date IS NULL
+BEGIN
+  UPDATE swap_requests 
+  SET requested_date = DATE('now')
+  WHERE id = NEW.id;
+END;

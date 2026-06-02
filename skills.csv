@@ -1,0 +1,32 @@
+id,name,category,difficulty_level
+1,Python programming,Tech,Intermediate
+2,Guitar lessons,Music,Beginner
+3,Tabla lessons,Music,Intermediate
+4,Graphic design,Design,Intermediate
+5,Figma UI design,Design,Beginner
+6,Yoga,Fitness,Beginner
+7,Calisthenics,Fitness,Intermediate
+8,South Indian cooking,Cooking,Beginner
+9,Bengali cooking,Cooking,Intermediate
+10,Portrait photography,Photography,Intermediate
+11,Street photography,Photography,Beginner
+12,French language,Language,Beginner
+13,Spanish language,Language,Beginner
+14,Woodworking,Craft,Intermediate
+15,Excel for beginners,Tech,Beginner
+16,SQL basics,Tech,Beginner
+17,Bike repair,Mechanical,Beginner
+18,Cycling training,Fitness,Beginner
+19,Home organisation,Household,Beginner
+20,Decluttering and sorting,Household,Beginner
+21,Deep cleaning help,Household,Beginner
+22,Kitchen cleaning,Household,Beginner
+23,Basic electrical fixes,Electrical,Intermediate
+24,Switch and socket repair,Electrical,Intermediate
+25,Wiring and fitting check,Electrical,Advanced
+26,Scooty ride share (1 hr),Transport,Beginner
+27,Bike ride share (1 hr),Transport,Beginner
+28,Pickup and drop (local),Transport,Beginner
+29,Heavy lifting help,Physical,Beginner
+30,Furniture moving,Physical,Beginner
+31,Shifting and packing help,Physical,Beginner
